@@ -1,0 +1,41 @@
+cells:
+  - kind: 2
+    value: "CREATE TABLE employee (\r
+
+      \    emp_id NUMBER PRIMARY KEY,\r
+
+      \    emp_name VARCHAR2(50),\r
+
+      \    designation VARCHAR2(50),\r
+
+      \    salary NUMBER\r
+
+      );\r
+
+      \r
+
+      \r
+
+      INSERT INTO employee VALUES (101, 'John', 'Manager', 50000);\r
+
+      INSERT INTO employee VALUES (102, 'Alice', 'Developer', 40000);\r
+
+      INSERT INTO employee VALUES (103, 'Bob', 'Tester', 35000);\r
+
+      \r
+
+      COMMIT;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT * FROM employee;\r\n\r\n"
+    languageId: oracle-sql
+  - kind: 2
+    value: "DESC employee;\r\n"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT object_name, object_type\r
+
+      FROM user_objects\r
+
+      WHERE object_name = 'EMPLOYEE';\r\n"
+    languageId: oracle-sql

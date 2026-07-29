@@ -1,0 +1,4 @@
+cells:
+  - kind: 2
+    value: SELECT USER FROM dual;
+    languageId: oracle-sql
