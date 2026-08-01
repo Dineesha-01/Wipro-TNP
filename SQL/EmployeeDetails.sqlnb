@@ -1,0 +1,37 @@
+cells:
+  - kind: 2
+    value: "CREATE TABLE EMPLOYEES_ASSIGNMENT (\r
+
+      \    EMPLOYEE_ID NUMBER(6) PRIMARY KEY,\r
+
+      \    FIRST_NAME VARCHAR2(20),\r
+
+      \    LAST_NAME VARCHAR2(25) NOT NULL,\r
+
+      \    EMAIL VARCHAR2(25),\r
+
+      \    PHONE_NUMBER VARCHAR2(20),\r
+
+      \    HIRE_DATE DATE NOT NULL,\r
+
+      \    JOB_ID VARCHAR2(10) NOT NULL,\r
+
+      \    SALARY NUMBER(8,2),\r
+
+      \    COMMISSION_PCT NUMBER(2,2),\r
+
+      \    MANAGER_ID NUMBER(6),\r
+
+      \    DEPARTMENT_ID NUMBER(4)\r
+
+      );"
+    languageId: oracle-sql
+  - kind: 2
+    value: DESC EMPLOYEES_ASSIGNMENT;
+    languageId: oracle-sql
+  - kind: 2
+    value: SELECT * FROM EMPLOYEES_ASSIGNMENT;
+    languageId: oracle-sql
+  - kind: 2
+    value: ""
+    languageId: oracle-sql
