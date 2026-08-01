@@ -1,0 +1,105 @@
+cells:
+  - kind: 2
+    value: "CREATE TABLE MY_EMPLOYEE AS\r
+
+      SELECT employee_id,\r
+
+      \       first_name,\r
+
+      \       last_name,\r
+
+      \       department_id,\r
+
+      \       salary\r
+
+      FROM EMPLOYEE_DETAILS\r
+
+      WHERE 1 = 2;"
+    languageId: oracle-sql
+  - kind: 2
+    value: DESC MY_EMPLOYEE;
+    languageId: oracle-sql
+  - kind: 2
+    value: "INSERT ALL\r
+
+      \    INTO MY_EMPLOYEE VALUES (201, 'Michael', 'Hartstein', 20, 13000)\r
+
+      \    INTO MY_EMPLOYEE VALUES (202, 'Pat', 'Fay', 20, NULL)\r
+
+      \    INTO MY_EMPLOYEE (EMPLOYEE_ID, FIRST_NAME, LAST_NAME,
+      DEPARTMENT_ID)\r
+
+      \         VALUES (203, 'Susan', 'Mavris', 40)\r
+
+      \    INTO MY_EMPLOYEE VALUES (205, 'Shelley', 'Higgins', 110, 12000)\r
+
+      \    INTO MY_EMPLOYEE VALUES (100, 'Steven', 'King', 90, 24000)\r
+
+      \    INTO MY_EMPLOYEE VALUES (101, 'Neena', 'Kochhar', 90, 17000)\r
+
+      \    INTO MY_EMPLOYEE VALUES (102, 'Lex De', 'Haan', 90, 17000)\r
+
+      \    INTO MY_EMPLOYEE VALUES (111, 'Ismael', 'Sciarra', 100, 7700)\r
+
+      \    INTO MY_EMPLOYEE VALUES (112, 'Jose Manuel', 'Urman', 100, 7800)\r
+
+      \    INTO MY_EMPLOYEE VALUES (204, 'Hermann', 'Baer', 70, 10000)\r
+
+      SELECT * FROM DUAL;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT *\r
+
+      FROM MY_EMPLOYEE\r
+
+      ORDER BY EMPLOYEE_ID;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "UPDATE MY_EMPLOYEE\r
+
+      SET SALARY = SALARY * 1.10\r
+
+      WHERE DEPARTMENT_ID = 90;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT EMPLOYEE_ID,\r
+
+      \       FIRST_NAME,\r
+
+      \       SALARY\r
+
+      FROM MY_EMPLOYEE\r
+
+      WHERE DEPARTMENT_ID = 90;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "UPDATE MY_EMPLOYEE\r
+
+      SET LAST_NAME = 'Higgins'\r
+
+      WHERE EMPLOYEE_ID = 202;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT *\r
+
+      FROM MY_EMPLOYEE\r
+
+      WHERE EMPLOYEE_ID = 202;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "DELETE FROM MY_EMPLOYEE\r
+
+      WHERE LOWER(FIRST_NAME) LIKE '%man%'\r
+
+      \   OR LOWER(LAST_NAME) LIKE '%man%';"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT *\r
+
+      FROM MY_EMPLOYEE\r
+
+      ORDER BY EMPLOYEE_ID;"
+    languageId: oracle-sql
+  - kind: 2
+    value: COMMIT;
+    languageId: oracle-sql
